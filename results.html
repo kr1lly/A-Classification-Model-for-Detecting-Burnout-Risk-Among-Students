@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Results</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .summary {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin-bottom: 8px;
+            background: #f4f6f8;
+            border-radius: 6px;
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .high { background: #e74c3c; }
+        .moderate { background: #f39c12; }
+        .low { background: #2ecc71; }
+        .strong { background: #3498db; }
+        .aligned { background: #9b59b6; }
+
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #ffe6e6;
+            border-left: 6px solid #e74c3c;
+        }
+
+        .result strong {
+            color: #e74c3c;
+        }
+
+        .tip {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .container:hover {
+            transform: scale(1.01);
+            transition: 0.3s;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #2575fc;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #1a5edb;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-btn">← Go Back</a>
+
+<div class="container">
+    <h1>🧠 Diagnosis Results</h1>
+    <p class="summary">Here is the summary of your burnout risk assessment:</p>
+
+    <ul>
+        <li><span>Workload</span> <span class="badge high">High</span></li>
+        <li><span>Control</span> <span class="badge low">Low</span></li>
+        <li><span>Reward</span> <span class="badge moderate">Moderate</span></li>
+        <li><span>Community</span> <span class="badge strong">Strong</span></li>
+        <li><span>Fairness</span> <span class="badge moderate">Moderate</span></li>
+        <li><span>Values</span> <span class="badge aligned">Aligned</span></li>
+    </ul>
+
+    <div class="result">
+        <h2>⚠️ Overall Risk: <strong>High</strong></h2>
+        <p class="tip">
+            Based on your responses, we recommend managing your workload and improving 
+            your sense of control at work. Try delegating tasks, setting boundaries, 
+            and reaching out for support if needed.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
